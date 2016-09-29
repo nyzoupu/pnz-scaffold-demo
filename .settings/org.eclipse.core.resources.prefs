@@ -16,5 +16,6 @@ encoding//src/main/java/org/pnz/scaffold/common/util/PrintLogUtil.java=UTF-8
 encoding//src/main/java/org/pnz/scaffold/common/util/String2MapUtil.java=UTF-8
 encoding//src/main/resources=UTF-8
 encoding//src/test/java=UTF-8
+encoding//src/test/java/org/pnz/scaffold/service/test/VolatileThreadTest.java=UTF-8
 encoding//src/test/resources=UTF-8
 encoding/<project>=UTF-8
