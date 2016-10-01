@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="GBK"?>
 <!DOCTYPE sqlMapConfig PUBLIC "-//ibatis.apache.org//DTD SQL Map Config 2.0//EN" 
     "http://ibatis.apache.org/dtd/sql-map-config-2.dtd">
-
 <sqlMapConfig>
 	<settings cacheModelsEnabled="true" enhancementEnabled="false"
 		lazyLoadingEnabled="false" maxRequests="3000" maxSessions="3000"
 		maxTransactions="3000" useStatementNamespaces="false" />
-	
-	<sqlMap resource="classpath:config/mybatis//user-sqlmap-mapping.xml"/>
-	
+	<sqlMap resource="config/ibatis/user-sqlmap-mapping.xml" />
 </sqlMapConfig>

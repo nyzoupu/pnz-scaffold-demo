@@ -2,29 +2,29 @@
 
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
-	xmlns:sofa="http://img.alipay.net/dtd/schema/service" xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:webflow="http://www.springframework.org/schema/webflow-config"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
          http://img.alipay.net/dtd/schema/service http://img.alipay.net/dtd/schema/service/sofa-service.xsd
-         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
          http://www.springframework.org/schema/webflow-config http://www.springframework.org/schema/webflow-config/spring-webflow-config-2.0.xsd"
 	default-autowire="byName">
 	
-	<!-- <bean id="userDataSource" class="org.apache.commons.dbcp.BasicDataSource">
+	<bean id="userDataSource" class="org.apache.commons.dbcp.BasicDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
-		<property name="url" value="xxxx" />
-		<property name="username" value="xxx" />
-		<property name="password" value="xxx" />
-	</bean>  -->
+		<property name="url" value="${app.jdbc.url}" />
+		<property name="username" value="${app.jdbc.username}" />
+		<property name="password" value="${app.jdbc.password}" />
+	</bean> 
 	<bean id="userSqlMapClient" class="org.springframework.orm.ibatis.SqlMapClientFactoryBean">
 		<property name="configLocation">
-			<value>classpath:config/mybatis/user-sqlmap-config.xml</value>
+			<value>classpath:config/ibatis/user-sqlmap-config.xml</value>
 		</property>
 	</bean>
 
 	<bean id="datalabSqlMapClientDAO" abstract="true">
 		<property name="dataSource">
-			<ref bean="dataSource" />
+			<ref bean="userDataSource" />
 		</property>
 		<property name="sqlMapClient">
 			<ref bean="userSqlMapClient" />
@@ -33,19 +33,19 @@
 	<bean id="userTransactionManager"
 		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
 		<property name="dataSource">
-			<ref bean="datalabDataSource" />
+			<ref bean="userDataSource" />
 		</property>
 	</bean>
 
-	<bean id="datalabTransactionTemplate"
+	<!-- <bean id="datalabTransactionTemplate"
 		class="org.springframework.transaction.support.TransactionTemplate">
 		<property name="transactionManager">
 			<ref bean="userTransactionManager" />
 		</property>
-	</bean>
+	</bean> -->
 
-	<!-- 本地新事务模板: 该事务模板中的处理将在新事务中运行 -->
-	<bean id="userNewTransactionTemplate"
+	 <!-- 本地新事务模板: 该事务模板中的处理将在新事务中运行 -->
+	<!--<bean id="userNewTransactionTemplate"
 		class="org.springframework.transaction.support.TransactionTemplate">
 		<property name="propagationBehavior" value="3" />
 		<property name="transactionManager" ref="userTransactionManager" />
@@ -55,5 +55,5 @@
 		class="org.springframework.transaction.support.TransactionTemplate">
 		<property name="propagationBehavior" value="2" />
 		<property name="transactionManager" ref="userNewTransactionTemplate" />
-	</bean>
+	</bean> -->
 </beans>

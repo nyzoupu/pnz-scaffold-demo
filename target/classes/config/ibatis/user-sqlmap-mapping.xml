@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="GBK"?>
 <!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" 
     "http://ibatis.apache.org/dtd/sql-map-2.dtd">
-
 <sqlMap>
-
 	<resultMap id="RM.User"
 		class="org.pnz.scaffold.dao.UserDO">
 		<result property="id" column="id" javaType="Long" jdbcType="BIGINT" />
 		<result property="name" column="name" javaType="java.lang.String"
 			jdbcType="VARCHAR" />
-		<result property="address" column="address" javaType="java.lang.String"
+		<result property="age" column="age" javaType="java.lang.String"
 			jdbcType="VARCHAR" />
 	</resultMap>
 
@@ -19,16 +17,10 @@
 
 	<select id="user.queryById"
 		resultMap="RM.User">
-		<include refid="user_filed" />
-		FROM user
+		SELECT <include refid="user_filed" />
+		FROM test_user
 		WHERE
 		id = #id#
 	</select>
 
-
-
-
-
-
 </sqlMap>
-

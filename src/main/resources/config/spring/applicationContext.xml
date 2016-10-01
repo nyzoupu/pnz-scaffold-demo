@@ -47,8 +47,9 @@
 
     <import resource="core-scaffold-config.xml" />
 	<import resource="applicationContext-*.xml" />
-	//<import resource="quartz-config.xml" /> 
-	<import resource="classpath:config/mybatis/common-dal-user-db .xml" /> 
-	<import resource="classpath:config/mybatis/user-sqlmap-mapping.xml" /> 
+	<!-- <import resource="quartz-config.xml" />  -->
+	<import resource="classpath:config/ibatis/common-dal-user-db.xml" /> 
+	<import resource="classpath:config/ibatis/metaadmin-dal.xml" /> 
+	<!-- <import resource="classpath:config/mybatis/user-sqlmap-mapping.xml" />  -->
 	
 </beans>
