@@ -1,7 +1,7 @@
 package org.pnz.scaffold.common.biz.test;
 
 import org.junit.Test;
-import org.pnz.scaffold.common.biz.ThreadPoolTaskTemplate;
+import org.pnz.scaffold.common.biz.service.ThreadPoolTaskTemplate;
 import org.pnz.scaffold.common.util.SpringContainer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -3,10 +3,10 @@ package org.pnz.scaffold.common.biz.test;
 import javax.annotation.Resource;
 
 import org.junit.Test;
-import org.pnz.scaffold.common.biz.TransactionTemplateUtil;
+import org.pnz.scaffold.common.biz.service.TransactionTemplateUtil;
+import org.pnz.scaffold.common.dao.SystemTestDAO;
+import org.pnz.scaffold.common.domain.User;
 import org.pnz.scaffold.common.util.SpringJunitBase;
-import org.pnz.scaffold.dao.SystemTestDAO;
-import org.pnz.scaffold.domain.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.transaction.TransactionStatus;

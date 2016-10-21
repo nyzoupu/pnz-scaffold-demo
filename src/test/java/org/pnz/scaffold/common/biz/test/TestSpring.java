@@ -1,7 +1,7 @@
 package org.pnz.scaffold.common.biz.test;
 
 import org.junit.Test;
-import org.pnz.scaffold.service.CommonQuerySequence;
+import org.pnz.scaffold.core.service.CommonQuerySequence;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;

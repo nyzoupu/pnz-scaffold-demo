@@ -24,11 +24,11 @@
 		<!-- 线程池所使用的缓冲队列 -->
 		<property name="queueCapacity" value="200" />
 	</bean> 
-	<bean id="threadPoolTaskTemplate" class="org.pnz.scaffold.common.biz.ThreadPoolTaskTemplate"
+	<bean id="threadPoolTaskTemplate" class="org.pnz.scaffold.common.biz.service.ThreadPoolTaskTemplate"
 	factory-method="getInstance">
 	</bean>  
 
-	<bean id="transactionTemplateUtil" class="org.pnz.scaffold.common.biz.TransactionTemplateUtil"
+	<bean id="transactionTemplateUtil" class="org.pnz.scaffold.common.biz.service.TransactionTemplateUtil"
 		factory-method="getInstance">
 	</bean>
 	<bean id="mysqlTransactionManager"

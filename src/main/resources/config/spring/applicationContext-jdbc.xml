@@ -39,8 +39,8 @@
         <property name="dataSource" ref="dataSource" />
         <property name="configLocation" value="classpath:config/mybatis/mybatis-config.xml" />
         <!-- <property name="mapperLocations" value="classpath:org/pnz/scaffold/dao/mybatis/*Mapper.xml" /> -->
-        <property name="mapperLocations" value="classpath:org/pnz/scaffold/dao/mybatis/SystemTestMapper.xml" />
-        <property name="typeAliasesPackage" value="org.pnz.scaffold.domain" />
+        <property name="mapperLocations" value="classpath:org/pnz/scaffold/common/dao/mybatis/SystemTestMapper.xml" />
+        <property name="typeAliasesPackage" value="org.pnz.scaffold.common.domain" />
     </bean>
 
     <!-- scan for mappers and let them be autowired -->
@@ -48,5 +48,5 @@
         <property name="basePackage" value="${MapperInterfacePackage}" />
     </bean-->
     
-    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer" p:basePackage="org.pnz.scaffold.dao"/>
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer" p:basePackage="org.pnz.scaffold.common.dao"/>
 </beans>

@@ -5,7 +5,7 @@ import javax.annotation.Resource;
 import org.junit.Assert;
 import org.junit.Test;
 import org.pnz.scaffold.common.util.SpringJunitBase;
-import org.pnz.scaffold.service.CommonQuerySequence;
+import org.pnz.scaffold.core.service.CommonQuerySequence;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

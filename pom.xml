@@ -18,8 +18,11 @@
 		<!-- <dependency> <groupId>javax</groupId> <artifactId>javaee-web-api</artifactId> 
 			<version>6.0</version> <scope>provided</scope> </dependency> -->
 		<!-- 在一些机器上找不到serlvert jar -->
-		<!-- <dependency> <groupId>javax.servlet</groupId> <artifactId>javax.servlet-api</artifactId> 
-			<version>3.0.1</version> <scope>provided</scope> </dependency> -->
+		<dependency> 
+		     <groupId>javax.servlet</groupId> 
+		     <artifactId>javax.servlet-api</artifactId> 
+			<version>3.0.1</version> 
+		<scope>provided</scope> </dependency>
 
 		<dependency>
 			<groupId>org.springframework</groupId>

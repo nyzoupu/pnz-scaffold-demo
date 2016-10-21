@@ -6,8 +6,7 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry excluding="config/" including="**/*.java" kind="src" path="src/test/resources"/>
-	<classpathentry excluding="config/|config/spring/|fd/|config/" including="**/*.java" kind="src" path="src/main/resources"/>
+	<classpathentry excluding="config/|config/spring/|fd/" including="**/*.java" kind="src" path="src/main/resources"/>
 	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
 		<attributes>
 			<attribute name="optional" value="true"/>

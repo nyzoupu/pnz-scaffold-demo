@@ -3,9 +3,9 @@ package org.pnz.scaffold.dao.test;
 import javax.annotation.Resource;
 
 import org.junit.Test;
+import org.pnz.scaffold.common.dao.UserDAO;
+import org.pnz.scaffold.common.dao.UserDO;
 import org.pnz.scaffold.common.util.SpringJunitBase;
-import org.pnz.scaffold.dao.UserDAO;
-import org.pnz.scaffold.dao.UserDO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -15,7 +15,7 @@ import org.slf4j.LoggerFactory;
  * 
  * @author Paulsen¬∑Zou 
  * @version  
- * @Date:2016Âπ?7Êú?3Êó•‰∏ãÂç?12:42:56 
+ * @Date:2016ÔøΩ?7ÔøΩ?3Êó•‰∏ãÔøΩ?12:42:56 
  * @version V1.0
  */
 
