@@ -12,7 +12,7 @@ import org.slf4j.LoggerFactory;
  * @version V1.0
  */
 public class TestContainer extends SpringContainer {
-	private final static  Logger logger = LoggerFactory.getLogger(Test.class);
+	private final static  Logger logger = LoggerFactory.getLogger(TestContainer.class);
 	@Test
 	public void testContainer() {
 		
