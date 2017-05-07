@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+	<!-- 输出到文件 -->
+	<appender name="file" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="file" value="d:/www/logs/szt-ms.log" />
+		<param name="append" value="true" />
+		<param name="encoding" value="utf-8" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="conversionPattern" value="%d %-5p %l - %m%n" />
+		</layout>
+	</appender>
+
+	<!-- 输出到控制台 -->
+	<appender name="console" class="org.apache.log4j.ConsoleAppender">
+		<param name="encoding" value="utf-8" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="conversionPattern" value="%d %-5p %c{1} - %m%n" />
+		</layout>
+	</appender>
+	
+	<!-- Debug All -->
+	<appender name="DebugDailyRollingFile"  
+        class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="threshold" value="debug" />
+        <param name="immediateFlush" value="true" />
+		<param name="append" value="true" />
+		<param name="encoding" value="utf-8" />
+        <param name="file" value="d:/www/logs/szt-ms/debug.log" />
+        <param name="datePattern" value="'.'yyyy-MM-dd'.log'" />
+        <layout class="org.apache.log4j.PatternLayout">  
+            <param name="conversionPattern" value="%d %-5p - %m%n" />
+        </layout>
+    </appender> 
+	
+	<!-- Info All -->
+	<appender name="InfoDailyRollingFile"  
+        class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="threshold" value="info" />
+        <param name="immediateFlush" value="true" />
+		<param name="append" value="true" />
+		<param name="encoding" value="utf-8" />
+        <param name="file" value="d:/www/logs/szt-ms/info.log" />
+        <param name="datePattern" value="'.'yyyy-MM-dd'.log'" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="conversionPattern" value="%d %-5p %c:%L - %m%n" />
+        </layout>
+    </appender> 
+    
+	<!-- Error All -->
+	<appender name="ErrorDailyRollingFile"  
+        class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="threshold" value="error" />
+        <param name="immediateFlush" value="true" />
+        <param name="file" value="d:/www/logs/szt-ms/error.log" />
+        <param name="datePattern" value="'.'yyyy-MM-dd'.log'" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="conversionPattern" value="%d %-5p %c:%L - %m%n" />
+        </layout>
+    </appender>
+
+	<root>
+		<level value="info" />
+		<appender-ref ref="console" />
+		<appender-ref ref="DebugDailyRollingFile" />
+		<appender-ref ref="InfoDailyRollingFile" />
+		<appender-ref ref="ErrorDailyRollingFile" />
+	</root>
+	 
+</log4j:configuration>

@@ -16,7 +16,7 @@ import org.slf4j.LoggerFactory;
  * @author zhangGB
  *
  */
-public class WSUtilHttps {
+public class WSUtilHttps {/*
 	private static final Logger LOGGER = LoggerFactory.getLogger(WSUtilHttps.class);
 
 	@SuppressWarnings("static-access")
@@ -40,4 +40,4 @@ public class WSUtilHttps {
 		client.close();
 		return (String) objects[0];
 	}
-}
+*/}

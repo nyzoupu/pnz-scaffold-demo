@@ -6,19 +6,17 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import sun.misc.BASE64Decoder;
-import sun.misc.BASE64Encoder;
 /**
  * �ο������� http://www.cnblogs.com/phinecos/archive/2008/09/23/1297292.html
  * @author zhangGB
  *
  */
-public class Base64Util {
+public class Base64Util {/*
 	
-	/**
+	*//**
 	 * ����main����
 	 * @param args
-	 */
+	 *//*
 	public static void main(String[] args) {
 		String imageStr = getImageStr("D:\\image.jpg");
 		System.out.println(imageStr);
@@ -35,13 +33,13 @@ public class Base64Util {
 		LOCAL_FILE_PATH += "conf" + File.separator + "image" + File.separator;
 	}
 
-	/**
+	*//**
 	 * �����ֽ������ַ���
 	 * 
 	 * @param imgBase64Str
 	 *            ����Base64��������ֽ������ַ���
 	 * @return �ֽ������ַ���
-	 */
+	 *//*
 	public static byte[] generateByte(String imgBase64Str) {
 		byte[] b = new byte[3072];
 		if (imgBase64Str == null) {
@@ -63,13 +61,13 @@ public class Base64Util {
 		}
 	}
 
-	/**
+	*//**
 	 * ��ͼƬ�ļ�ת��Ϊ�ֽ������ַ��������������Base64���봦��
 	 * 
 	 * @param imgContent
 	 *            �������ͼƬ
 	 * @return ����Base64��������ֽ������ַ���
-	 */
+	 *//*
 	public static String getImageStr(String imgContent) {
 		String imgBase64Str = null;
 		InputStream in = null;
@@ -97,7 +95,7 @@ public class Base64Util {
 		return imgBase64Str;
 	}
 
-	/**
+	*//**
 	 * ���ֽ������ַ�������Base64���벢����ͼƬ
 	 * 
 	 * @param imgBase64Str
@@ -105,7 +103,7 @@ public class Base64Util {
 	 * @param imgName
 	 *            ͼƬ��
 	 * @return �Ƿ�����ͼƬ
-	 */
+	 *//*
 	public static boolean generateImage(String imgBase64Str, String imgName) {
 		OutputStream out = null;
 		if (imgName == null || ("").equals(imgName)) {
@@ -125,10 +123,10 @@ public class Base64Util {
 					b[i] += 256;
 				}
 			}
-			/**
+			*//**
 			 * ����ͼƬ�ļ�,�洢·��ΪC:\Users\xxx(���������)\conf\temp
 			 *
-			 */
+			 *//*
 			//���Ŀ¼������,����Ŀ¼
 			File localImageFolder = new File(LOCAL_FILE_PATH);
 			if(!localImageFolder.exists()) {
@@ -157,4 +155,4 @@ public class Base64Util {
 		}
 	}
 
-}
+*/}
